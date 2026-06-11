@@ -1,0 +1,70 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/main/schemas/manifest.v2.schema.json
+
+packaging_format = 2
+
+id = "htmly"
+name = "Htmly"
+description.en = "Databaseless PHP blogging platform"
+description.fr = "Plateforme de blog PHP sans base de données"
+
+version = "3.1.1~ynh1"
+
+maintainers = ["eric_G"]
+
+[upstream]
+license = "GPL-2.0"
+website = "https://www.htmly.com/"
+demo = "https://demo.htmly.com/"
+admindoc = "https://docs.htmly.com/"
+code = "https://github.com/danpros/htmly"
+
+[integration]
+yunohost = ">= 12.1.39"
+helpers_version = "2.1"
+architectures = "all"
+multi_instance = true
+
+ldap = false
+sso = false
+
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.path]
+    type = "path"
+    default = "/htmly"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+    [install.language]
+    ask.en = "Choose the application language"
+    ask.fr = "Choisissez la langue de l'application"
+    type = "select"
+    choices = ["en_US", "de_DE", "fr_FR"]
+    default = "fr_FR"
+
+[resources]
+
+    [resources.sources]
+
+    [resources.sources.main]
+    url = "https://github.com/danpros/htmly/archive/refs/tags/v3.1.1.tar.gz"
+    sha256 = "a458ab4d5b165f6f42859d1af7e1714e9ebc07c59ad0c77ae333970197a127be"
+    autoupdate.strategy = "latest_github_tag"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.apt]
+    packages = "php8.5-xml, php8.5-zip, php8.5-mbstring, php8.5-gd, php8.5-intl"
