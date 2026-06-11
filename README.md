@@ -21,7 +21,7 @@ Databaseless PHP blogging platform
 
 
 ## Screenshots
-![Screenshot of Htmly](./doc/screenshots/example.jpg)
+![Screenshot of Htmly](./doc/screenshots/screenshot.png)
 
 ## 📦 Developer info
 
