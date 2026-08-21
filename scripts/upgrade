@@ -23,13 +23,6 @@ ynh_script_progression "Upgrading source files..."
 ynh_setup_source --dest_dir="$install_dir" --full_replace --keep="config content"
 
 #=================================================
-# UPDATE A CONFIG FILE
-#=================================================
-ynh_script_progression "Updating $app's configuration files..."
-
-# ynh_config_add --template="config.ini.example" --destination="$install_dir/config/config.ini"
-
-#=================================================
 # REAPPLY SYSTEM CONFIGURATION
 #=================================================
 ynh_script_progression "Upgrading system configurations related to $app..."
