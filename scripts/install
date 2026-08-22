@@ -34,16 +34,6 @@ ynh_config_add_phpfpm
 ynh_config_add_nginx
 
 #=================================================
-# SETUP APPLICATION WITH CURL
-#=================================================
-ynh_script_progression "Finalizing installation..."
-
-ynh_local_curl "/install.php" \
-    "user_name=$admin" \
-    "user_password=$admin_pw" \
-    "blog_title=$blog_title"
-
-#=================================================
 # END OF SCRIPT
 #=================================================
 
