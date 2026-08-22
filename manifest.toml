@@ -47,6 +47,11 @@ ram.runtime = "15M"
     ask.fr = "Choisissez un mot de passe pour l'administrateur."
     type = "password"
 
+    [install.blog_title]
+    ask.en = "Blog title"
+    ask.fr = "Titre du blog"
+    type = "string"
+
 [resources]
 
     [resources.sources]
