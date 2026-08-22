@@ -51,6 +51,7 @@ ram.runtime = "15M"
     ask.en = "Blog title"
     ask.fr = "Titre du blog"
     type = "string"
+    default = "HTMLy"
 
 [resources]
 
