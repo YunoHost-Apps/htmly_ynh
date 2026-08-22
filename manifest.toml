@@ -38,19 +38,6 @@ ram.runtime = "15M"
     [install.init_main_permission]
     type = "group"
     default = "visitors"
-    
-    [install.admin]
-    type = "user"
-
-    [install.admin_pw]
-    ask.en = "Please chose a password for the admin user."
-    ask.fr = "Choisissez un mot de passe pour l'administrateur."
-    type = "password"
-
-    [install.blog_title]
-    ask.en = "Blog title"
-    ask.fr = "Titre du blog"
-    type = "string"
 
 [resources]
 
