@@ -40,7 +40,7 @@ ynh_script_progression "Finalizing installation..."
 
 ynh_local_curl "/install.php" \
     "user_name=$admin" \
-    "user_password=$password" \
+    "user_password=$admin_pw" \
     "blog_title=$app"
 
 #=================================================
