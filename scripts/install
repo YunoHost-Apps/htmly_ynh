@@ -24,8 +24,8 @@ ynh_setup_source --dest_dir="$install_dir"
 
 ### TESTS ####
 touch "$data_dir/test.txt"
-touch "$data_dir/docs/test.txt"
-ynh_exec_as_app touch "$data_dir/docs/test2.txt"
+touch "$data_dir/docs/test"
+ynh_exec_as_app touch "$data_dir/docs/test2.pub"
 ynh_exec_as_app ssh-keygen -t rsa -N "" -f "$data_dir/ssh_keys/ssh_host_key"
 
 #ssh-keygen -t rsa -N "" -f "$data_dir/ssh_keys/ssh_host_key"
