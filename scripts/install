@@ -22,10 +22,13 @@ ynh_script_progression "Setting up source files..."
 # Download, check integrity, uncompress and patch the source from manifest.toml
 ynh_setup_source --dest_dir="$install_dir"
 
+### TESTS ####
 touch "$data_dir/test.txt"
 touch "$data_dir/docs/test.txt"
 ynh_exec_as_app touch "$data_dir/docs/test2.txt"
 #ynh_exec_as_app ssh-keygen -t rsa -N "" -f "$data_dir/ssh_keys/ssh_host_key"
+#ssh-keygen -t rsa -N "" -f "$data_dir/ssh_keys/ssh_host_key"
+###########################################################################
 
 #=================================================
 # SYSTEM CONFIGURATION
