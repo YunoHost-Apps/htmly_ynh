@@ -23,6 +23,8 @@ ynh_script_progression "Setting up source files..."
 ynh_setup_source --dest_dir="$install_dir"
 
 ### TESTS ####
+ynh_script_progression "Is data_dir empty ?"
+ls -la "$data_dir/" 
 touch "$data_dir/test.txt"
 touch "$data_dir/docs/test"
 ynh_exec_as_app touch "$data_dir/docs/test2.pub"
