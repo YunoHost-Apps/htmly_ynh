@@ -53,6 +53,7 @@ ram.runtime = "15M"
     [resources.install_dir]
 
     [resources.data_dir]
+    subdirs = ["docs", "ssh_keys"]
 
     [resources.permissions]
     main.url = "/"
