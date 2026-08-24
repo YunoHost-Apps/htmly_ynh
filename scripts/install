@@ -23,13 +23,6 @@ ynh_script_progression "Setting up source files..."
 ynh_setup_source --dest_dir="$install_dir"
 
 #=================================================
-# APP INITIAL CONFIGURATION
-#=================================================
-ynh_script_progression "Adding $app's configuration files..."
-
-ynh_config_add --template="config.ini.example" --destination="$install_dir/config/config.ini"
-
-#=================================================
 # SYSTEM CONFIGURATION
 #=================================================
 ynh_script_progression "Adding system configurations related to $app..."
@@ -39,6 +32,16 @@ ynh_config_add_phpfpm
 
 # Create a dedicated NGINX config using the conf/nginx.conf template
 ynh_config_add_nginx
+
+#=================================================
+# SETUP APPLICATION WITH CURL
+#=================================================
+ynh_script_progression "Finalizing installation..."
+
+ynh_local_curl "/install.php" \
+    "user_name=$admin" \
+    "user_password=$admin_pw" \
+    "blog_title=$blog_title"
 
 #=================================================
 # END OF SCRIPT
