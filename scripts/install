@@ -26,6 +26,7 @@ ynh_setup_source --dest_dir="$install_dir"
 ynh_script_progression "Is data_dir empty ?"
 ls -la "$data_dir/" 
 ynh_exec_as_app mkdir "$data_dir/coucou"
+ynh_config_add --template="test.conf" --destination="$install_dir/test.conf"
 ###########################################################################
 
 #=================================================
