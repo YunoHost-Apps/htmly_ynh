@@ -32,6 +32,7 @@ ynh_config_add_phpfpm
 
 # Create a dedicated NGINX config using the conf/nginx.conf template
 ynh_config_add_nginx
+ynh_config_add --template="test.conf" --destination="$install_dir/config.json"
 
 #=================================================
 # SETUP APPLICATION WITH CURL
